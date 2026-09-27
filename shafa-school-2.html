@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدرسه شفا - مسیر رشد، خلاقیت و موفقیت درخشان. آموزشگاهی مدرن با تسهیلات پیشرفته و برنامه‌های آموزشی متعادل">
+    <meta name="keywords" content="مدرسه شفا, آموزش, ایران, تحصیل, دانش‌آموز">
+    <meta name="author" content="Shafa School">
+    <meta property="og:title" content="مدرسه شفا - Shafa School">
+    <meta property="og:description" content="مدرسه شفا؛ مسیر رشد، خلاقیت و موفقیت درخشان">
+    <meta property="og:type" content="website">
+    
+    <title>مدرسه شفا - Shafa School | آموزشگاه مدرن</title>
+    
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+    
+    <!-- Google Fonts: Vazirmatn & IRANSans -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IRANSans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for additional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Vazirmatn', 'IRANSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            direction: rtl;
+        }
+        
+        /* RTL Tailwind Configuration */
+        [dir="rtl"] {
+            --tw-translate-x: 0;
+        }
+        
+        /* Custom Color Palette */
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #0052a3;
+            --primary-light: #e6f2ff;
+            --accent: #ff6b35;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-bottom: 2px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        nav a {
+            padding: 8px 16px;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+            padding: 10px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-light);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            left: 0;
+            background: white;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .mobile-menu a {
+            padding: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 50%, #ff6b35 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            animation: slideInDown 0.8s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            animation: slideInUp 0.8s ease 0.2s both;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease 0.4s both;
+        }
+        
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 60px;
+            padding: 0 20px;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+        
+        section h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+        
+        section p {
+            color: var(--text-light);
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-light), #fff);
+            padding: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .card p {
+            color: var(--text-light);
+            font-size: 15px;
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        
+        /* News & Announcements Tabs */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            font-size: 15px;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .tab-btn:hover {
+            color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        /* Media Player */
+        .media-player {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+        
+        .media-player h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .player-controls {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .audio-player {
+            width: 100%;
+            outline: none;
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 250px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-item-img {
+            transform: scale(1.1);
+        }
+        
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            direction: rtl;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-light);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-color);
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 60px 20px 20px;
+            text-align: center;
+        }
+        
+        footer h4 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-divider {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 30px 0;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            gap: 6px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons button {
+                width: 100%;
+            }
+            
+            section h2 {
+                font-size: 32px;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                border-bottom: none;
+            }
+            
+            .tab-btn {
+                border-bottom: none;
+                border-right: 3px solid transparent;
+            }
+            
+            .tab-btn.active {
+                border-right-color: var(--primary);
+                border-bottom: none;
+            }
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .scale-in {
+            animation: scaleIn 0.5s ease;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo">
+                <div class="logo-icon">ش</div>
+                <div>
+                    <div style="font-size: 18px;">مدرسه شفا</div>
+                    <div style="font-size: 12px; color: var(--text-light); font-weight: 400;">Shafa School</div>
+                </div>
+            </div>
+            
+            <nav>
+                <a href="#home">صفحه اصلی</a>
+                <a href="#about">درباره مدرسه</a>
+                <a href="#news">اخبار و اطلاعیه‌ها</a>
+                <a href="#honors">افتخارات</a>
+                <a href="#gallery">گالری</a>
+                <a href="#contact">تماس با ما</a>
+            </nav>
+            
+            <div style="display: flex; gap: 10px; align-items: center;">
+                <button class="btn-primary">سامانه دانش‌آموزی</button>
+                <button class="hamburger" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">صفحه اصلی</a>
+            <a href="#about">درباره مدرسه</a>
+            <a href="#news">اخبار و اطلاعیه‌ها</a>
+            <a href="#honors">افتخارات</a>
+            <a href="#gallery">گالری</a>
+            <a href="#contact">تماس با ما</a>
+            <button class="btn-primary" style="width: 100%; margin-top: 10px;">سامانه دانش‌آموزی</button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>مدرسه شفا؛ مسیر رشد، خلاقیت و موفقیت درخشان</h1>
+            <p>آموزشگاهی مدرن با تسهیلات پیشرفته، معلمان مجرب و برنامه‌های آموزشی متوازن برای پرورش نسلی خلاق و دانشمند</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary">پیش‌ثبت‌نام آنلاین</button>
+                <button class="btn-outline">تور مجازی مدرسه</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number">1200+</span>
+                    <span class="stat-label">دانش‌آموز</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">85</span>
+                    <span class="stat-label">معلم متخصص</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">45</span>
+                    <span class="stat-label">جایزه ملی</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">28</span>
+                    <span class="stat-label">مدال المپیاد</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" style="background: #f8fafc;">
+        <h2>درباره مدرسه شفا</h2>
+        <p>مدرسه شفا با بیش از دو دهه تجربه آموزشی، تعهد‌دار ارائه بهترین خدمات آموزشی و پرورشی است</p>
+        
+        <div class="card-grid">
+            <div class="card fade-in">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap" style="font-size: 32px; color: var(--primary);"></i>
+                </div>
+                <div class="card-body">
+                    <h3>آموزش نوین</h3>
+                    <p>استفاده از روش‌های تدریس روز دنیا و فناوری‌های آموزشی پیشرفته برای افزایش کیفیت یادگیری دانش‌آموزان</p>
+                </div>
+            </div>
+            
+            <div class="card fade-in" style="animation-delay: 0.1s;">
+                <div class="card-header">
+                    <i class="fas fa-flask" style="font-size: 32px; color: var(--accent);"></i>
+                </div>
+                <div class="card-body">
+                    <h3>تسهیلات مدرن</h3>
+                    <p>آزمایشگاه‌های مجهز، کتابخانه دیجیتال، سالن‌های ورزشی و فضاهای خلاقیت برای توسعه مهارت‌های عملی</p>
+                </div>
+            </div>
+            
+            <div class="card fade-in" style="animation-delay: 0.2s;">
+                <div class="card-header">
+                    <i class="fas fa-heart" style="font-size: 32px; color: var(--success);"></i>
+                </div>
+                <div class="card-body">
+                    <h3>محیط مودب</h3>
+                    <p>فضایی ایمن، دوستانه و محترم که دانش‌آموزان را برای رشد فردی و اجتماعی صحیح تشویق می‌کند</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- News & Announcements Section -->
+    <section id="news">
+        <h2>اخبار و اطلاعیه‌ها</h2>
+        <p>آخرین اخبار و رویدادهای مدرسه را همراه با برنامه‌های آموزشی دنبال کنید</p>
+        
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'news-tab')">اخبار</button>
+                <button class="tab-btn" onclick="switchTab(event, 'events-tab')">رویدادها</button>
+                <button class="tab-btn" onclick="switchTab(event, 'schedule-tab')">برنامه امتحانات</button>
+            </div>
+            
+            <!-- News Tab -->
+            <div id="news-tab" class="tab-content active">
+                <div class="card scale-in">
+                    <div class="card-body">
+                        <div style="background: var(--primary); color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 12px;">جدید</div>
+                        <h3>افتتاح آزمایشگاه علوم پیشرفته</h3>
+                        <p style="text-align: right;">آزمایشگاه جدید علوم پیشرفته با تجهیزات روز دنیا و متخصصان برتر افتتاح شد و برای دانش‌آموزان فرصتی بی‌نظیر ایجاد کرد.</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۱۵ مهرماه ۱۴۰۲</div>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.1s;">
+                    <div class="card-body">
+                        <div style="background: var(--success); color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 12px;">پیروزی</div>
+                        <h3>کسب مدال طلای المپیاد شیمی</h3>
+                        <p style="text-align: right;">دانش‌آموز برتر مدرسه در المپیاد شیمی کشوری مدال طلا کسب کرده و افتخار مدرسه را برافراشت.</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۸ مهرماه ۱۴۰۲</div>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.2s;">
+                    <div class="card-body">
+                        <div style="background: var(--warning); color: white; padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 12px;">رویداد</div>
+                        <h3>جشنواره هنری و فرهنگی بهار</h3>
+                        <p style="text-align: right;">جشنواره سالانه مدرسه برای نمایش توانایی‌های خلاقانه دانش‌آموزان در رشته‌های هنری و فرهنگی برگزار می‌شود.</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۲۵ اسفند ۱۴۰۲</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Events Tab -->
+            <div id="events-tab" class="tab-content">
+                <div class="card scale-in">
+                    <div class="card-body">
+                        <h3>🎓 مراسم فارغ‌التحصیلی</h3>
+                        <p style="text-align: right;">مراسم فارغ‌التحصیلی دانش‌آموزان پایه دوازدهم با حضور خانواده‌ها و معلمان</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۱۲ تیر ۱۴۰۳</div>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.1s;">
+                    <div class="card-body">
+                        <h3>⚽ مسابقات ورزشی بین‌مدارس</h3>
+                        <p style="text-align: right;">مسابقات فوتسال و والیبال دانش‌آموزان مدرسه با مدارس منطقه</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۲۰ دی ۱۴۰۲</div>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.2s;">
+                    <div class="card-body">
+                        <h3>🔬 نمایشگاه پروژه‌های دانش‌آموزی</h3>
+                        <p style="text-align: right;">نمایشگاه پروژه‌های تحقیقی و علمی دانش‌آموزان در حوزه‌های مختلف</p>
+                        <div style="color: var(--text-light); font-size: 14px;">۱۸ بهمن ۱۴۰۲</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Schedule Tab -->
+            <div id="schedule-tab" class="tab-content">
+                <div class="card scale-in">
+                    <div class="card-body">
+                        <h3>📅 امتحانات پایان ترم اول</h3>
+                        <p style="text-align: right;"><strong>تاریخ آغاز:</strong> ۲۸ دی ۱۴۰۲<br><strong>مدت:</strong> ۱۰ روز<br><strong>محل:</strong> کلاس‌های معمول</p>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.1s;">
+                    <div class="card-body">
+                        <h3>📅 امتحانات پایان ترم دوم</h3>
+                        <p style="text-align: right;"><strong>تاریخ آغاز:</strong> ۲۲ خرداد ۱۴۰۳<br><strong>مدت:</strong> ۱۲ روز<br><strong>محل:</strong> سالن‌های امتحان</p>
+                    </div>
+                </div>
+                
+                <div class="card scale-in" style="animation-delay: 0.2s;">
+                    <div class="card-body">
+                        <h3>📅 روز مدرسه و جشن پایان سال</h3>
+                        <p style="text-align: right;"><strong>تاریخ:</strong> ۲۵ تیر ۱۴۰۳<br><strong>ساعت:</strong> ۸ صبح تا ۱۲ ظهر<br><strong>محل:</strong> سالن مرکزی و فضای بیرونی</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- School Anthem & Media Player -->
+    <section id="media" style="background: var(--primary-light);">
+        <h2>سرود رسمی مدرسه شفا</h2>
+        <p>شنیدن سرود زیبای مدرسه شفا که نمادی از آرمان‌ها و ارزش‌های ما است</p>
+        
+        <div class="media-player">
+            <h3>🎵 سرود رسمی</h3>
+            <div class="player-controls">
+                <audio class="audio-player" controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+                </audio>
+            </div>
+            <p style="text-align: right; color: var(--text-light); margin-bottom: 0;">با صدای گروه موسیقی مدرسه</p>
+        </div>
+    </section>
+    
+    <!-- Honors & Gallery Section -->
+    <section id="honors">
+        <h2>افتخارات و دستاوردهای مدرسه</h2>
+        <p>افتخاری از دستاوردهای شاخص دانش‌آموزان و گروه‌های فعالیت مدرسه</p>
+        
+        <div class="card-grid">
+            <div class="card fade-in">
+                <div style="background: linear-gradient(135deg, #ffd700, #ffed4e); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 60px;">🥇</div>
+                <div class="card-body">
+                    <h3>۲۸ مدال المپیاد</h3>
+                    <p style="text-align: right;">کسب مدال‌های المپیادهای علمی در رشته‌های ریاضیات، فیزیک، شیمی و زیست‌شناسی</p>
+                </div>
+            </div>
+            
+            <div class="card fade-in" style="animation-delay: 0.1s;">
+                <div style="background: linear-gradient(135deg, #3b82f6, #60a5fa); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 60px;">🏆</div>
+                <div class="card-body">
+                    <h3>۴۵ جایزه ملی</h3>
+                    <p style="text-align: right;">جوایز و تقدیرنامه‌های ملی برای پروژه‌های پژوهشی و دانش‌آموزان برتر</p>
+                </div>
+            </div>
+            
+            <div class="card fade-in" style="animation-delay: 0.2s;">
+                <div style="background: linear-gradient(135deg, #10b981, #34d399); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 60px;">📚</div>
+                <div class="card-body">
+                    <h3>۳۲ انتشار علمی</h3>
+                    <p style="text-align: right;">انتشار مقالات و پژوهش‌های دانش‌آموزان در مجلات علمی معتبر</p>
+                </div>
+            </div>
+            
+            <div class="card fade-in" style="animation-delay: 0.3s;">
+                <div style="background: linear-gradient(135deg, #f97316, #fb923c); height: 120px; display: flex; align-items: center; justify-content: center; font-size: 60px;">🎯</div>
+                <div class="card-body">
+                    <h3>۹۸% قبولی</h3>
+                    <p style="text-align: right;">توانمندی دانش‌آموزان در آزمون‌های ورودی دانشگاه و اختصاص‌های تحصیلی</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" style="background: #f8fafc;">
+        <h2>گالری چندرسانه‌ای</h2>
+        <p>تصاویر و فیلم‌های رویدادها، فعالیت‌ها و دستاوردهای مدرسه</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1427504494785-cdا8fdc0b853?w=400&h=250&fit=crop" alt="کلاس درس مدرن" class="gallery-item-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=250&fit=crop" alt="آزمایشگاه علوم" class="gallery-item-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516534775068-bb57acba2413?w=400&h=250&fit=crop" alt="کتابخانه دیجیتال" class="gallery-item-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop" alt="سالن ورزشی" class="gallery-item-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=250&fit=crop" alt="رویداد مدرسه" class="gallery-item-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="دانش‌آموزان" class="gallery-item-img">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>تماس با ما</h2>
+        <p>برای پرسش و پاسخ یا ثبت‌نام، با ما تماس بگیرید</p>
+        
+        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+            <div class="contact-form">
+                <h3 style="margin-bottom: 20px;">فرم تماس</h3>
+                <form onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label>نام و نام‌خانوادگی</label>
+                        <input type="text" name="name" placeholder="نام خود را وارد کنید" required>
+                    </div>
+                    <div class="form-group">
+                        <label>شماره تلفن</label>
+                        <input type="tel" name="phone" placeholder="۰۹ XX XXX XXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ایمیل</label>
+                        <input type="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>موضوع</label>
+                        <input type="text" name="subject" placeholder="موضوع پیام" required>
+                    </div>
+                    <div class="form-group">
+                        <label>پیام</label>
+                        <textarea name="message" placeholder="پیام خود را بنویسید..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">ارسال پیام</button>
+                </form>
+            </div>
+            
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid var(--border-color);">
+                <h3 style="margin-bottom: 30px;">اطلاعات تماس</h3>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--primary); font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 5px;">آدرس</div>
+                            <div style="color: var(--text-light);">تهران، منطقه ۵، خیابان سیمتری، پلاک ۱۲۳</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-phone" style="color: var(--accent); font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 5px;">تلفن</div>
+                            <div style="color: var(--text-light); direction: ltr;">+98-21-XXXX-XXXX</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-envelope" style="color: var(--success); font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 5px;">ایمیل</div>
+                            <div style="color: var(--text-light);">info@shafaschool.ir</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-clock" style="color: var(--warning); font-size: 20px; margin-top: 2px;"></i>
+                        <div>
+                            <div style="font-weight: 600; margin-bottom: 5px;">ساعات کاری</div>
+                            <div style="color: var(--text-light);">شنبه تا چهارشنبه: ۸ الی ۱۷</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid var(--border-color);">
+                    <h4 style="margin-bottom: 15px;">شبکه‌های اجتماعی</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="تلگرام">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="اینستاگرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="یوتیوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="فیس‌بوک">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 24px; font-weight: 700; margin-bottom: 10px;">مدرسه شفا</div>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">مسیر رشد، خلاقیت و موفقیت درخشان</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#home">صفحه اصلی</a>
+                <a href="#about">درباره ما</a>
+                <a href="#news">اخبار</a>
+                <a href="#contact">تماس</a>
+                <a href="#">سیاست‌های حریم‌خصوصی</a>
+                <a href="#">شرایط استفاده</a>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="social-links" style="margin-bottom: 20px;">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #94a3b8;">
+                <p>© ۱۴۰۳ مدرسه شفا. تمام حقوق محفوظ است.</p>
+                <p style="font-size: 13px; margin-top: 8px;">طراحی و توسعه: بخش فناوری اطلاعات</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Tab Switching
+        function switchTab(event, tabName) {
+            event.preventDefault();
+            
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        // Form Submission
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Collect form data
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+            
+            // Log form data (in production, this would send to a server)
+            console.log('Form Data Submitted:', data);
+            
+            // Show success message
+            alert('پیام شما با موفقیت ارسال شد. متشکریم!');
+            form.reset();
+        }
+        
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for Fade-In Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Add scroll event for header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 0) {
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)';
+            }
+        });
+        
+        // Gallery lightbox (simple click effect)
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                console.log('Gallery image clicked:', img.alt);
+                // You can implement a full lightbox here
+            });
+        });
+        
+        // Stat Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current) + '+';
+                }
+            }, 16);
+        }
+        
+        // Initialize stat counters on scroll
+        let statsAnimated = false;
+        window.addEventListener('scroll', () => {
+            const statsSection = document.querySelector('.stats');
+            if (statsSection && !statsAnimated) {
+                const rect = statsSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    document.querySelectorAll('.stat-number').forEach(element => {
+                        const text = element.textContent;
+                        const number = parseInt(text);
+                        animateCounter(element, number);
+                    });
+                    statsAnimated = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
